@@ -33,7 +33,7 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddTransient<JwtAuthenticationHandler>();
 builder.Services.AddHttpClient("ServerApi", client =>{ 
     
-    client.BaseAddress = new Uri("https://localhost:7111"); 
+    client.BaseAddress = new Uri("https://apigatewayerp.azurewebsites.net"); 
     client.Timeout = TimeSpan.FromSeconds(30);
 })
    .AddHttpMessageHandler<JwtAuthenticationHandler>();
